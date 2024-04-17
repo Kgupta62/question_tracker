@@ -7,17 +7,18 @@
   <link rel="stylesheet" href="../stylesheets/style.css">
 </head>
 <body>
-  
+  <h1 style="margin-bottom: 2vh; font-family:gilroy;"> QUESTION TRACKER</h1>
       <div class="container" id="container">
+        
     <div class="form-container sign-up-container">
       <form action="/register" method="post">
         <h1>Create Account</h1>
-        <div class="social-container">
+        <!-- <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <span>or use your email for registration</span>
+        </div> -->
+        <!-- <span>or use your email for registration</span> -->
         <input type="text"  name="username"  placeholder="Username" />
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Password" />
@@ -28,15 +29,15 @@
       
       <form action="/login" method="post">
         <h1>Sign in</h1>
-        <div class="social-container">
+        <!-- <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+        </div> -->
         <span>or use your account</span>
         <input type="text" name="username" placeholder="Name">
         <input type="password" name="password" placeholder="Passward">
-        <a href="#">Forgot your password?</a>
+        <a href="/forgot-password">Forgot your password?</a>
          <button>Sign In</button> 
       </form>
 
@@ -55,8 +56,7 @@
         </div>
       </div>
     </div>
-  </div>  
-   
+  </div>    
   <footer>
     <!-- <p>
       Created with <i class="fa fa-heart"></i> by

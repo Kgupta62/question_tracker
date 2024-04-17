@@ -28,17 +28,24 @@
           </div> -->
                 <a style="text-decoration: none;" href="/admin"><button id="upl">Upload</button></a>
         <div id="box-1">
-            <h2 id="txt4">Code your way to the top and win big in the 45 Day DSA Coding Challenge!</h2>
+            <h2 id="txt4">Code your way to the top and win big in the 45 Day DSA Coding Challenge! (upcoming)</h2>
             <button id="start">Start now</button>
         </div>
         <div id="box">
+            <% if (categories.length === 0) { %>
+                <p style="margin: 1vh;">No categories available.(Please upload question</p>
+            <% } else { %>
                 <% categories.forEach(function(elem){ %>
-                <a style="text-decoration: none;" href="/data/<%= elem %>"><div class="bx1">
-                   <h1><%= elem %></h1>
-                   <h6>Solve now</h6> 
-            </div>  </a> 
-          <% }) %>
-                </div>
+                    <a style="text-decoration: none;" href="/data/<%= elem %>">
+                        <div class="bx1">
+                            <h1><%= elem %></h1>
+                            <h6>Solve now</h6> 
+                        </div>  
+                    </a> 
+                <% }) %>
+            <% } %>
+        </div>
+        
                 <!-- <a href="/q2"  >
                      <div  id="bx1">
                     <h1 id="q1">Matrix</h1>
@@ -130,7 +137,7 @@
         <div id="aakhri">
             <button id="star">⭐️ This Project</button>
             <button id="star2">🌙</button>
-            <button id="star3">About 🧐</button>
+           <a style="text-decoration: none;" href="/logout"> <button  id="star3">Log Out</button> </a>
         </div>
     </div>
 

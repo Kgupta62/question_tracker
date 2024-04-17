@@ -26,7 +26,7 @@ body{
     height: 8vh;
     width: 70vw;
     color: #0a58ca;
-    left: 30vw;
+    left: 35vw;
     top: 4vh;
     letter-spacing: 3px;
 }
@@ -54,21 +54,22 @@ body{
     left:13vw ;
 }
 #pick_random{
-    font-size: 10px;
-    font-weight:.5px;
+    font-size: 13px;
+    font-weight:.8px;
     border: 2px solid blue;
-    padding-left: 1.5vw;
+    padding-left: 1.3vw;
     padding-right: 1.3vw;
     padding-top: .5vh;
+    margin-right: 2vw;
 }
 #pick_random>h1{
     color: blue;
     margin: .7vh 2vw;
-    font-size: 15px;
+    font-size: 19px;
 }
 #search_box{
     text-align: center;
-    font-size: 20px;
+    font-size: 29px;
     width: 45vw;
     border: 2px solid rgb(168, 166, 166);
 }
@@ -77,46 +78,106 @@ body{
     margin-top: 1vh;
 }
 
-#status{
+#search-button {
+    background-color: #007bff; /* Default button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 25px;
+    cursor: pointer;
+    position: absolute;
+    top: -0.1vh;
+    left: 64vw;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  #search-button:hover {
+    background-color: #0056b3; /* Button color on hover */
+  }
+  
+/* #status{
     height: 6vh;
     font-weight:1px; 
-    border: 2px solid rgb(168, 166, 166);
+    border: 5px solid rgb(168, 166, 166);
     padding:1vh 1vw;
-}
-#bookmark{
+} */
+/* #bookmark{
     margin-left:1.5vw;
     padding: 1vh .7vw;
     border-radius: 4px;
     border: 1.5px solid rgb(48, 148, 48);
-}
-#Questions_table{
+} */
+/* General styles */
+
+/* Styles for the table container */
+#Questions_table {
     height: 60vh;
     width: 90vw;
-    margin-top: 19vh;
-    overflow-y: scroll;
-    overflow-x:visible;
+    margin-left: 5vw;
+    margin-top: 20vh; /* Adjusted top margin */
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
-table, th, td {
-    border: .3px solid rgb(172, 164, 164);
+/* Styles for the table */
+table {
+    width: 100%;
     border-collapse: collapse;
-    padding: 2vh 1vw;
-  }
-#table{
-    margin-left: 13vw;
-    top: 100vh;
-    height: 25vh;
-    width: 75vw;
+    border: none; /* No border for the table */
 }
+
+/* Styles for table header cells */
+th {
+    padding: 12px;
+    text-align: left;
+    background-color: #007bff; /* Blue background for headers */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Styles for table data cells */
+td {
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for table rows */
+tr:hover td {
+    background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+/* Modern styling for specific table cells */
 td:nth-child(3) {
-    color: blue;
+    color: #007bff; /* Blue text color for third column */
 }
-td:nth-child(4) {
-    padding-left: 1vw;
-    align-items: center;
-    justify-content: center;
-}
+
+td:nth-child(4),
 td:nth-child(5) {
-    align-items: center;
-    justify-content: center;
+    text-align: center; /* Center align content of the fourth and fifth columns */
 }
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

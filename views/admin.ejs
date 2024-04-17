@@ -62,8 +62,8 @@
         <a style="text-decoration: none;" href="/profile"><h1 style="text-align: center; color: #ffffff;">Question Tracker</h1></a>
         <form id="myForm" method="post" action="/done" >
             <label for="category" class="textillate">Category:</label>
-            <input type="text" id="category" name="category" class="animate__animated animate__fadeInLeft">
-
+            <input type="text" id="category" name="category" class="animate__animated animate__fadeInLeft" oninput="this.value = this.value.toUpperCase();">
+            
             <label for="question" class="textillate">Question:</label>
             <input type="text" id="question" name="question" class="animate__animated animate__fadeInLeft">
 

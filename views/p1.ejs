@@ -17,16 +17,18 @@
             <h1><%= category %></h1> </h1>
         </div>
         <div id="search_line">
-            <div id="pick_random">
+            <a style="text-decoration: none;" href="/random-question"><div id="pick_random">
                 <h1 style="cursor: pointer;">Pick Random </h1>
-            </div>
+            </div></a>
             
-            <input id="search_box" type="text" placeholder=" Search Question..  🔍" >
-            
-            <div id="status">
+            <form action="/search" method="post">
+                <input id="search_box" name="q" type="text" placeholder=" Search Question..  ">
+                <button id="search-button">Search</button>
+              </form>
+            <!-- <div id="status">
                 <h3 style="cursor: pointer;"> sort</h1>
-            </div>
-            <div id="bookmark"> 🗃 </div>
+            </div> -->
+            <!-- <div id="bookmark"> 🗃 </div> -->
         </div>
         <div id="Questions_table">
             <table id="table">
@@ -50,5 +52,7 @@
         </div >
         
     </div>
+
+   
 </body>
 </html>
