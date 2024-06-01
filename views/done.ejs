@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
+    <title>Question-Uploader</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +59,13 @@
 </head>
 <body>
     <div class="container">
+        <% if (error!="null") { %>
+            <div style="color: black;font-size:medium;" class="alert alert-danger" role="alert">
+              <%= error %>
+              <h1>Question not saved!</h1>
+            </div>
+          <% }else{ %>
+          
         <h1>Data Saved Successfully</h1>
         <div>
             <p>Category: <%= data.category %></p>
@@ -66,6 +73,7 @@
             <p>Notes: <%= data.notes %></p>
             <p>Link: <a href="<%= data.link %>"><%= data.link %></a></p>
         </div>
+        <% } %>
         <a href="/admin">Go back to form</a>
     </div>
 </body>
